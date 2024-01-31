@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.github.Lucodivo"
-version = "v0.2.2-alpha"
+version = "v0.2.4-alpha"
 
 repositories {
     mavenCentral()
@@ -64,6 +64,6 @@ tasks.test {
     useJUnitPlatform()
 }
 
-kotlin {
-    jvmToolchain(17)
+kotlin.jvmToolchain {
+    languageVersion.set(JavaLanguageVersion.of(8))
 }
