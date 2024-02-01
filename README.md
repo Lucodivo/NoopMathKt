@@ -13,6 +13,14 @@ NoopMathKt is agnostic to left-hand/right-hand. It's just a linear algebra numbe
 Multiply two matrices and it will do matrix multiplication. As simple as that.
 ## Use
 ### Gradle 
+    // build.gradle.kts
+
+    repositories {
+        ...
+        mavenCentral()
+        maven("https://jitpack.io")
+        ...
+    }
 
     dependencies {
         ...
