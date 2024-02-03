@@ -28,7 +28,7 @@ Multiply two matrices and it will do matrix multiplication. As simple as that.
         ...
     }
 
-### Create RotationTranslation Matrix
+### Create a Camera Matrix
 
     val translationMat = Mat4(
         1.0f, 0.0f, 0.0f, 0.0f,
@@ -36,13 +36,16 @@ Multiply two matrices and it will do matrix multiplication. As simple as that.
         0.0f, 0.0f, 1.0f, 0.0f,
         -position.x, -position.y, -position.z, 1.0f)
 
-    val rotationMat = Mat4(
+    val measureMat = Mat4(
         xAxis.x, yAxis.x, zAxis.x, 0.0f,
         xAxis.y, yAxis.y, zAxis.y, 0.0f,
         xAxis.z, yAxis.z, zAxis.z, 0.0f,
         0.0f, 0.0f, 0.0f, 1.0f)
 
-    val rotationThenTranslationMat = rotationMat * translationMat
+    // Matrices should be read from right to left
+    // translate object, so that the camera lies at the origin
+    // measure the position of the object in the direction the camera is facing
+    val camerasMat = measureMat * translationMat
 
 ### Uniform Helper Functions
 
