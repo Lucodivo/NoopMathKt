@@ -1,4 +1,4 @@
-package com.inasweaterpoorlyknit
+package com.inasweaterpoorlyknit.noopmath
 
 import kotlin.math.PI
 import kotlin.math.abs
@@ -15,8 +15,8 @@ const val radiansPerDegree = PI / 180.0
 fun Double.degToRad(): Double = this * radiansPerDegree
 fun Float.degToRad(): Float = this * radiansPerDegree.toFloat()
 
-fun max(a: Float, b: Float) = if(a > b) { a } else { b }
-fun min(a: Float, b: Float) = if(a < b) { a } else { b }
+fun max(a: Float, b: Float) = if(a > b) a else b
+fun min(a: Float, b: Float) = if(a < b) a else b
 fun clamp(value: Double, min: Double, max: Double) = if (value < min) { min } else if (value > max) { max } else { value }
 fun clamp(value: Float, min: Float, max: Float) = if (value < min) { min } else if (value > max) { max } else { value }
 fun lerp(x: Float, y: Float, a: Float) = x * (1.0f - a) + (y * a)

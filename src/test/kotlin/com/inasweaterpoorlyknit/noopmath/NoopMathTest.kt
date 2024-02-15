@@ -1,4 +1,4 @@
-package com.inasweaterpoorlyknit
+package com.inasweaterpoorlyknit.noopmath
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
